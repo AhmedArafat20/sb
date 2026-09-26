@@ -90,7 +90,40 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", setActiveLink);
   setActiveLink();
 
-  /* ---------- 5) السنة الحالية في الفوتر ---------- */
+  /* ---------- 5) فورم الواتساب ---------- */
+  const whatsappForm = document.getElementById("whatsappForm");
+  const WHATSAPP_NUMBER = "966502123049"; // بدون + وبدون صفر في البداية
+
+  if (whatsappForm) {
+    whatsappForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("waName").value.trim();
+      const phone = document.getElementById("waPhone").value.trim();
+      const area = document.getElementById("waArea").value.trim();
+      const message = document.getElementById("waMessage").value.trim();
+
+      if (!name || !phone || !message) {
+        alert("من فضلك عبّي الاسم ورقم الجوال وتفاصيل المشكلة.");
+        return;
+      }
+
+      let text = `مرحبًا سباك بالطائف 👋%0A`;
+      text += `الاسم: ${name}%0A`;
+      text += `رقم الجوال: ${phone}%0A`;
+      if (area) text += `الحي/المنطقة: ${area}%0A`;
+      text += `تفاصيل المشكلة: ${message}`;
+
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+        text.replace(/%0A/g, "\n")
+      )}`;
+
+      window.open(whatsappUrl, "_blank");
+      whatsappForm.reset();
+    });
+  }
+
+  /* ---------- 6) السنة الحالية في الفوتر ---------- */
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();

@@ -338,6 +338,63 @@
               <i>←</i>
             </div>
           </div>
+
+          <!-- ============ WHATSAPP FORM ============ -->
+          <div class="whatsapp-form-wrap reveal">
+            <div class="whatsapp-form-heading">
+              <span class="whatsapp-form-icon">💬</span>
+              <div>
+                <h3>أرسل طلبك مباشرة عبر واتساب</h3>
+                <p>املأ البيانات وسيتم فتح واتساب برسالة جاهزة لإرسالها لنا.</p>
+              </div>
+            </div>
+            <form id="whatsappForm" class="whatsapp-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="waName">الاسم</label>
+                  <input
+                    type="text"
+                    id="waName"
+                    name="waName"
+                    placeholder="اكتب اسمك"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="waPhone">رقم الجوال</label>
+                  <input
+                    type="tel"
+                    id="waPhone"
+                    name="waPhone"
+                    placeholder="05xxxxxxxx"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="waArea">الحي / المنطقة</label>
+                <input
+                  type="text"
+                  id="waArea"
+                  name="waArea"
+                  placeholder="مثال: حي السلامة"
+                />
+              </div>
+              <div class="form-group">
+                <label for="waMessage">تفاصيل المشكلة</label>
+                <textarea
+                  id="waMessage"
+                  name="waMessage"
+                  rows="4"
+                  placeholder="اشرح لنا المشكلة باختصار..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-whatsapp form-submit-btn">
+                💬 إرسال عبر واتساب
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

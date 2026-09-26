@@ -769,7 +769,103 @@ img {
 .contact-card > i {
   color: var(--primary);
   font-style: normal;
-} /* ========================================================= FOOTER ========================================================= */
+} /* ========================================================= WHATSAPP FORM ========================================================= */
+.whatsapp-form-wrap {
+  max-width: 700px;
+  margin: 50px auto 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px;
+}
+.whatsapp-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.whatsapp-form-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #e8fff5;
+  font-size: 26px;
+}
+.whatsapp-form-heading h3 {
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+.whatsapp-form-heading p {
+  color: var(--text);
+  font-size: 14px;
+}
+.whatsapp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group label {
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--background);
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--dark);
+  resize: vertical;
+  transition: 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(8, 121, 201, 0.1);
+}
+.form-submit-btn {
+  width: 100%;
+  border: 1px solid #c8f4e1;
+  cursor: pointer;
+  font-size: 16px;
+}
+@media (max-width: 760px) {
+  .whatsapp-form-wrap {
+    padding: 25px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .whatsapp-form-heading {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ========================================================= FOOTER ========================================================= */
 .footer {
   background: #071f32;
   color: white;
